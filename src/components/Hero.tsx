@@ -1,10 +1,11 @@
 
-import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-emerald-50 via-blue-50 to-teal-50">
+    <section className="relative min-h-screen pt-16 flex items-center justify-center overflow-hidden bg-gradient-to-br from-emerald-50 via-blue-50 to-teal-50">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-emerald-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-[pulse_4s_ease-in-out_infinite]"></div>
@@ -34,21 +35,26 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-[fade-in_1s_ease-out_1.5s_both]">
-            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              Start Your Healing Journey
-              <ArrowRight className="ml-2 w-5 h-5" />
+            <Button asChild size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              <Link to="/signup">
+                Start Your Healing Journey
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-2 border-gray-300 text-gray-700 px-8 py-4 text-lg font-semibold rounded-full hover:bg-gray-50 transition-all duration-300">
-              Watch Demo
+            <Button asChild variant="outline" size="lg" className="border-2 border-gray-300 bg-white/60 text-gray-700 px-8 py-6 text-lg font-semibold rounded-full hover:bg-white transition-all duration-300">
+              <a href="#features">See How It Works</a>
             </Button>
           </div>
           
           <div className="mt-12 animate-[fade-in_1s_ease-out_2s_both]">
-            <p className="text-sm text-gray-500 mb-4">Trusted by over 50,000+ people worldwide</p>
-            <div className="flex justify-center items-center space-x-8 opacity-60">
-              <div className="w-24 h-8 bg-gray-200 rounded animate-pulse"></div>
-              <div className="w-24 h-8 bg-gray-200 rounded animate-pulse"></div>
-              <div className="w-24 h-8 bg-gray-200 rounded animate-pulse"></div>
+            <p className="text-sm text-gray-500 mb-4">Trusted by over 50,000 people worldwide</p>
+            <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-3 text-sm font-medium text-gray-600">
+              {["14-day free trial", "No credit card required", "Cancel anytime"].map((item) => (
+                <span key={item} className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                  {item}
+                </span>
+              ))}
             </div>
           </div>
         </div>
