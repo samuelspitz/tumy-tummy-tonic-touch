@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetDescription, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import Logo from "@/components/Logo";
 import { cn } from "@/lib/utils";
 
@@ -59,6 +59,7 @@ const Navbar = () => {
           </SheetTrigger>
           <SheetContent side="right" className="w-72">
             <SheetTitle className="sr-only">Menu</SheetTitle>
+            <SheetDescription className="sr-only">Site navigation</SheetDescription>
             <div className="mt-8 flex flex-col gap-6">
               {links.map((link) => (
                 <a

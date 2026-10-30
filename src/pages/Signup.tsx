@@ -463,7 +463,7 @@ const Signup = () => {
                         <Button
                           type="submit"
                           size="lg"
-                          className="flex-1 rounded-full"
+                          className="rounded-full sm:flex-1"
                           disabled={form.formState.isSubmitting}
                         >
                           {form.formState.isSubmitting ? (
