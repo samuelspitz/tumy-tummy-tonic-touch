@@ -156,7 +156,7 @@ const Signup = () => {
 
   return (
     <div className="grid min-h-screen lg:grid-cols-2">
-      <aside className="relative hidden overflow-hidden bg-gradient-to-br from-emerald-600 to-blue-600 p-12 text-white lg:flex lg:flex-col lg:justify-between">
+      <aside className="relative hidden overflow-hidden lg:sticky lg:top-0 lg:h-screen bg-gradient-to-br from-emerald-600 to-blue-600 p-12 text-white lg:flex lg:flex-col lg:justify-between">
         <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-white/10 blur-2xl" />
         <div className="absolute -bottom-32 -left-16 h-80 w-80 rounded-full bg-white/10 blur-2xl" />
 
